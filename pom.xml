@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.foxtel.fast</groupId>
-	<artifactId>common-java-components</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>common-java-components</name>
-	<parent>
-		<groupId>com.foxtel.mule</groupId>
-		<artifactId>mule-parent</artifactId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
 
-	<dependencies>
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.9</version>
-		</dependency>
-	<dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-spring-config</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.foxtel.examples</groupId>
+	<artifactId>maven-release-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+	<name>Mule maven-mule-plugin-test Application</name>
+
+    <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<mule.version>3.8.3</mule.version>
+    	<mule.tools.version>1.2</mule.tools.version>
+	</properties>
+	
+	<scm>
+		<connection>scm:git:https://github.com/naveenkreddy32/maven-mule-plugin-test.git</connection>
+		<url>scm:git:https://github.com/naveenkreddy32/maven-mule-plugin-test.git</url>
+		<developerConnection>scm:git:https://github.com/naveenkreddy32/maven-mule-plugin-test.git</developerConnection>
+	</scm>
+	
+	<repositories>
+          <repository>
+            <id>Central</id>
+            <name>Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-release</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>

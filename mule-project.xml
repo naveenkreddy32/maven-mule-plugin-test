@@ -2,5 +2,4 @@
 <mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.8.3.ee" schemaVersion="5.3.0.0">
     <name>maven-release-test</name>
     <description></description>
-    <muleExtension name="MCS Logger Module" qualifier="org.mule.tooling.ui.contribution.mcs-logger-module.3.5.0"/>
 </mule-project>
