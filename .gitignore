@@ -1,0 +1,8 @@
+**/.project
+**/.classpath
+**/catalog/*
+**/target
+**/.mule
+**/.settings
+**/reports
+**/bin
